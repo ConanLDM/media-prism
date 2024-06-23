@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_22_113058) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_23_142106) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_22_113058) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "genres_tv_shows", id: false, force: :cascade do |t|
+    t.bigint "tv_show_id", null: false
+    t.bigint "genre_id", null: false
   end
 
   create_table "movies", force: :cascade do |t|
@@ -37,6 +42,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_22_113058) do
     t.text "synopsis"
     t.string "network"
     t.integer "runtime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "video_games", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.date "release_date"
+    t.string "developer"
+    t.string "publisher"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
