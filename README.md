@@ -7,6 +7,8 @@ making music playable.
 
 Intend to utilise Turbo Morphing for part of the media element, as it has been used in other cases previously for a media player.
 
+Stimulus controllers will also be included to increase interactivity of the media aspects of the application, as the partial target of this application is neat, responsive frontend interactivity and design.
+
 May look to make use of external JS frameworks (e.g. React, Vue). Also will make use of at least one of Bootstrap or Tailwind.
 
 
